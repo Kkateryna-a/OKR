@@ -1,13 +1,133 @@
 <!DOCTYPE html>
 <html>
-
 <head>
     <title>Tourism Guide - Home</title>
+    <style>
+        body { background-image: url('background.jpg'); background-size: cover; }
+        a { color: green; }
+        table { width: 80%; margin: auto; border-collapse: collapse; }
+        th { background-color: darkblue; color: white; padding: 10px; }
+        td { border: 1px solid black; padding: 10px; text-align: center; }
+    </style>
 </head>
-
 <body>
-    <h2>Welcome to the Tourism Guide!</h2>
-    <p>Explore new places and get useful travel tips.</p>
-</body>
+<!--напис-->
+    <h2><font face="Verdana" size="5" color="darkred"><b>Welcome to the Tourism Guide!</b></font></h2>
+<!--Використовуємо тег р-->
+    <p><font size="4">Explore new places and get useful travel tips.</font></p>
+    <p><i>Traveling is an amazing way to learn about different cultures, cuisines, and traditions.</i></p>
+	
+<!--4 зображення-->
+    <a href="image2.jpg" target="_blank">
+        <img src="image2.jpg" width="200" height="150" alt="Travel Image">
+    </a>
 
+    <a href="image3.jpeg" target="_blank">
+        <img src="image3.jpeg" width="200" height="150" alt="Travel Image">
+    </a>
+
+    <a href="image4.jpg" target="_blank">
+        <img src="image4.jpg" width="200" height="150" alt="Travel Image">
+    </a>
+
+    <a href="image5.jpg" target="_blank">
+        <img src="image5.jpg" width="200" height="150" alt="Travel Image">
+    </a>
+
+<!--посилання на Section 1-->
+   
+   <p><a href="#section1">Section 1</a></p>
+ 
+<!--Section 1--> 
+    <h3 id="section1"><font size="5" color="blue">Section 1: Why Travel?</font></h3>
+    <p><b>Traveling helps broaden our horizons and gives us unforgettable experiences.</b></p>
+	
+<!--посилання на інший сайт -->	
+    <p>Visit <a href="https://www.lonelyplanet.com/" target="_blank">Lonely Planet</a> for more travel inspiration.</p>
+	
+	
+<!--Списки з різним типом форматування-->
+
+<!--Списки з ul (маркований список)-->
+    <h3>Types of Travel</h3>
+    <ul type="circle">
+        <li>Adventure Travel</li>
+        <li>Beach Holidays</li>
+        <li>City Breaks</li>
+    </ul>
+    
+<!--Списки з ol (нумерований список)-->
+    <ol type="I">
+        <li>Plan ahead</li>
+        <li>Choose destinations wisely</li>
+    </ol>
+   
+<!--Списки з dl (список описів)-->
+    <dl>
+        <dt><b>Adventure Travel</b></dt>
+        <dd>Includes hiking, rafting, and extreme sports.</dd>
+        <dt><b>City Break</b></dt>
+        <dd>Exploring historical sites and urban experiences.</dd>
+    </dl>
+    
+	
+    <h3>Travel Information</h3>
+    <table>
+	
+<!--Таблиця1-->
+        <caption><b>Useful Travel Resources</b></caption>
+        <tr>
+            <th>Image</th>
+            <th>Website</th>
+            <th>Description</th>
+        </tr>
+        <tr>
+            <td><img src="imaget1.png" width="200" height="100" alt="Travel Image 1"></td>
+            <td><a href="https://www.expedia.com" target="_blank">Expedia</a></td>
+            <td>Book flights, hotels, and car rentals</td>
+        </tr>
+        <tr>
+            <td><img src="imaget2.png" width="200" height="100" alt="Travel Image 2"></td>
+            <td><a href="https://www.booking.com" target="_blank">Booking.com</a></td>
+            <td>Find the best hotels worldwide</td>
+        </tr>
+		 <tr>
+            <td><img src="imaget3.png" width="200" height="100" alt="Travel Image 3"></td>
+            <td><a href="https://www.skyscanner.com.ua/hotels" target="_blank">Skyscanner.com</a></td>
+            <td>Hotel reservations with free cancellation and flexible terms</td>
+        </tr>
+    </table>
+
+<!--Таблиця2-->
+    <h3>Complex Table</h3>
+    <table cellspacing="5" cellpadding="10" border="1">
+    <colgroup>
+        <col style="background-color: lightgray">
+        <col style="background-color: lightgray">
+        <col>
+    </colgroup>
+    <tr>
+        <th colspan="3" style="background-color: navy; color: white;">Travel Budget</th>
+    </tr>
+    <tr>
+        <td rowspan="2">Accommodation</td>
+        <td>Hotel</td>
+        <td>$100 per night</td>
+    </tr>
+    <tr>
+        <td>Hostel</td>
+        <td>$30 per night</td>
+    </tr>
+    <tr>
+        <td colspan="2" style="background-color: lightgray;">Food</td>
+        <td>$50 per day</td>
+    </tr>
+    </table>
+
+<!--Плаваючий фрейм-->
+    <h3>Interactive Map</h3>
+    <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d325516.56926392514!2d30.203055195063037!3d50.40200751266227!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x40d4cf4ee15a4505%3A0x764931d2170146fe!2sKyiv%2C%20Ukraine%2C%2002000!5e0!3m2!1sen!2spl!4v1741045029708!5m2!1sen!2spl" width="600" height="450" style="border:0;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
+		
+		
+</body>
 </html>
