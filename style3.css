@@ -1,0 +1,94 @@
+/* Загальні стилі для сторінки */
+body {
+    background-color: #b0d5ff;
+    font-family: Arial, sans-serif;
+    line-height: 1.6;
+}
+
+
+
+
+/* Навігація (меню)*/
+a {
+    text-decoration: none;
+    font-weight: bold;
+    color: #0056b3;
+}
+nav ul {
+    list-style: none;
+    padding: 0;
+}
+
+nav ul li {
+    display: inline;
+    margin: 0 40px;
+}
+
+ul {
+    margin: 20px auto;
+    width: 60%;
+    text-align: left;
+}
+
+
+
+/* Стилі для заголовка */
+#page-header {
+    text-align: center;
+    margin-top: 20px;
+}
+
+.main-title {
+    font-size: 36px; /* Розмір шрифта для заголовка 1 рівня */
+    color: #2c3e50;
+}
+
+/* Стилі для основного контенту */
+.content {
+    padding: 20px;
+}
+
+/* Стилі для заголовків другого рівня */
+.section-title {
+    font-size: 28px; /* Розмір шрифта для заголовка 2 рівня */
+    color: #34495e;
+}
+
+/* Стиль для абзаців */
+.tip-description, .resource-description {
+    font-size: 18px; /* Розмір шрифта */
+    color: #555555; 
+    text-align: justify;
+    margin-bottom: 20px;
+}
+
+/* Стилі для списку порад */
+.tips-list {
+    list-style-type: disc; /* Тип маркерів */
+    padding-left: 20px;
+}
+
+.tip-item {
+    margin-bottom: 10px; /* Відступи між елементами списку */
+}
+
+/* Стилі для списку ресурсів */
+.resources-list {
+    list-style-type: none; /* Без маркерів */
+    padding-left: 0;
+}
+
+.resource-link {
+    color: #3498db; /* Колір тексту для посилань */
+    text-decoration: none;
+}
+
+.resource-link:hover {
+    color: #2426ab; /* Колір при наведенні */
+}
+
+/* Стилі для посилань на ресурси */
+#travel-tips a {
+    font-weight: bold;
+}
+

@@ -1,0 +1,98 @@
+body { 
+    background-image: url('background.jpg'); 
+    background-size: cover; 
+    font-family: Verdana, sans-serif;
+    display: flex;
+    justify-content: space-between;
+}
+
+.content {
+    flex: 1;
+    padding: 20px;
+    text-align: left;
+}
+
+/* Стилі для кнопки */
+.home-button {
+    display: inline-block;
+    margin: 20px auto;
+    padding: 10px 20px;
+    background-color: #0056b3;
+    color: white;
+    text-decoration: none;
+    font-size: 18px;
+    border-radius: 5px;
+    border: none;
+    cursor: pointer;
+}
+
+.home-button:hover {
+    background-color: #003d82;
+}
+
+/* Стилі для зображень */
+.image-container {
+    width: 320px;
+    text-align: right;
+    padding: 30px;
+}
+
+.image-container img {
+    display: block;
+    margin-bottom: 20px;
+    width: 280px;
+    height: 180px;
+}
+
+/* Стилі для маркованого списку */
+ul {
+    list-style-type: circle;
+    padding-left: 20px; 
+    font-size: 16px;
+    color: #333; 
+    line-height: 1.6;
+}
+
+ul li {
+    margin-bottom: 10px; /* Відстань між елементами списку */
+}
+
+/* Стилі для нумерованого списку */
+ol {
+    list-style-type: upper-roman;
+    padding-left: 20px;
+    font-size: 16px;
+    color: #333;
+    line-height: 1.6;
+}
+
+ol li {
+    margin-bottom: 10px;
+}
+
+/* Стилі для визначень у списку */
+dl {
+    font-size: 16px;
+    color: #333;
+}
+
+dt {
+    font-weight: bold; 
+    color: #0056b3; 
+}
+
+dd {
+    margin-bottom: 10px;
+    padding-left: 10px; /* Відступ для описів */
+}
+
+
+/* Загальні стилі для тексту */
+h2, h3, h4 {
+    color: darkblue;
+}
+
+h3 {
+    color: #011f70;
+}
+
