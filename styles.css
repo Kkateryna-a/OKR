@@ -68,3 +68,61 @@ ul, ol, dl {
     text-align: left;
 }
 
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+/* Дочірній селектор */
+.container > p {
+    color: red;
+}
+
+/* Контекстний селектор */
+.context-example p {
+    color: blue;
+}
+
+/* Сусідній селектор */
+ul + p {
+    color: green;
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+

@@ -34,13 +34,9 @@ ul {
 
 /* Стилі для заголовка */
 #page-header {
-    text-align: center;
+	color: #2c3e50;
+    text-align: center !important;
     margin-top: 20px;
-}
-
-.main-title {
-    font-size: 36px; /* Розмір шрифта для заголовка 1 рівня */
-    color: #2c3e50;
 }
 
 /* Стилі для основного контенту */
@@ -50,13 +46,13 @@ ul {
 
 /* Стилі для заголовків другого рівня */
 .section-title {
-    font-size: 28px; /* Розмір шрифта для заголовка 2 рівня */
+    font-size: 28px;
     color: #34495e;
 }
 
 /* Стиль для абзаців */
 .tip-description, .resource-description {
-    font-size: 18px; /* Розмір шрифта */
+    font-size: 18px;
     color: #555555; 
     text-align: justify;
     margin-bottom: 20px;
@@ -74,17 +70,17 @@ ul {
 
 /* Стилі для списку ресурсів */
 .resources-list {
-    list-style-type: none; /* Без маркерів */
+    list-style-type: none;
     padding-left: 0;
 }
 
 .resource-link {
-    color: #3498db; /* Колір тексту для посилань */
+    color: #3498db; 
     text-decoration: none;
 }
 
 .resource-link:hover {
-    color: #2426ab; /* Колір при наведенні */
+    color: #2426ab;
 }
 
 /* Стилі для посилань на ресурси */
