@@ -30,7 +30,7 @@ nav ul {
 
 nav ul li {
     display: inline;
-    margin: 0 40px;
+    margin: 0 10px;
 }
 
 /* Контейнер основного контенту */
@@ -90,6 +90,11 @@ ul, ol, dl {
 /* Контекстний селектор */
 .context-example p {
     color: blue;
+}
+
+/* Контекстний селектор */
+.context-example > p {
+    color: yellow;
 }
 
 /* Сусідній селектор */

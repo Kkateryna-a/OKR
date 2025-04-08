@@ -5,10 +5,7 @@ body {
     line-height: 1.6;
 }
 
-
-
-
-/* Навігація (меню)*/
+/* Навігація */
 a {
     text-decoration: none;
     font-weight: bold;
@@ -18,73 +15,93 @@ nav ul {
     list-style: none;
     padding: 0;
 }
-
 nav ul li {
     display: inline;
     margin: 0 40px;
 }
-
 ul {
     margin: 20px auto;
     width: 60%;
     text-align: left;
 }
 
-
-
-/* Стилі для заголовка */
+/* Заголовок */
 #page-header {
-	color: #2c3e50;
+    color: #2c3e50;
     text-align: center !important;
     margin-top: 20px;
 }
 
-/* Стилі для основного контенту */
+/* Контент */
 .content {
     padding: 20px;
 }
 
-/* Стилі для заголовків другого рівня */
+/* Заголовки */
 .section-title {
     font-size: 28px;
     color: #34495e;
 }
 
-/* Стиль для абзаців */
+/* Абзаци */
 .tip-description, .resource-description {
     font-size: 18px;
-    color: #555555; 
+    color: #555555;
     text-align: justify;
     margin-bottom: 20px;
 }
 
-/* Стилі для списку порад */
+/* Список порад */
 .tips-list {
-    list-style-type: disc; /* Тип маркерів */
+    list-style-type: disc;
     padding-left: 20px;
 }
-
 .tip-item {
-    margin-bottom: 10px; /* Відступи між елементами списку */
+    margin-bottom: 10px;
 }
 
-/* Стилі для списку ресурсів */
+/* Список ресурсів */
 .resources-list {
     list-style-type: none;
     padding-left: 0;
 }
-
 .resource-link {
-    color: #3498db; 
+    color: #3498db;
     text-decoration: none;
 }
-
 .resource-link:hover {
     color: #2426ab;
 }
 
-/* Стилі для посилань на ресурси */
-#travel-tips a {
-    font-weight: bold;
-}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 

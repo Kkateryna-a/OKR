@@ -1,0 +1,126 @@
+body {
+  font-family: Arial, sans-serif;
+  margin: 0;
+  padding: 0;
+}
+
+.header {
+  background-color: #5DADE2;
+  color: white;
+  padding: 20px;
+  text-align: center;
+  position: relative;
+}
+
+.menu {
+  background-color: #D6EAF8;
+  padding: 10px;
+  text-align: center;
+  position: sticky;
+  top: 0;
+}
+
+.menu a {
+  margin: 0 15px;
+  text-decoration: none;
+  color: #154360;
+  font-weight: bold;
+}
+
+.menu a:link {
+  color: #154360;
+}
+
+.menu a:visited {
+  color: #7D3C98;
+}
+
+.menu a:hover {
+  color: #E74C3C;
+  text-decoration: underline;
+}
+
+.menu a:active {
+  color: #1ABC9C;
+}
+
+
+
+.content1 {
+  padding: 20px;
+}
+
+
+.link1 {
+  background-color: pink;
+  padding: 10px;
+  text-align: center;
+}
+
+.link1 a: {
+  margin: 0 20px;
+  text-decoration: underline;
+  color: #154360;
+}
+
+.link1 a:link {
+  color: #154360;
+}
+
+.link1 a:visited {
+  color: red;
+}
+
+.link1 a:hover {
+  color: blue;
+  text-decoration: none;
+}
+
+.link1 a:active {
+  color: purple;
+}
+
+
+
+
+.content {
+  padding: 20px;
+}
+
+.destination {
+  border: 1px solid #ccc;
+  margin: 10px 0;
+  padding: 15px;
+  position: relative;
+}
+
+
+.destination h2::before {
+  content: "🌍 ";
+}
+
+.destination p::after {
+  content: " ✈️";
+}
+
+/*плаваючий блок*/
+.float-block {
+  float: left;
+  width: 45%;
+  margin-right: 5%;
+  background-color: #F9EBEA;
+}
+
+
+.destination:first-child {
+  background-color: yellow;
+}
+
+.footer {
+  clear: both;
+  background-color: #5DADE2;
+  color: white;
+  text-align: center;
+  padding: 5px;
+  position: relative;
+}
