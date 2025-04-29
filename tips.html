@@ -1,40 +1,40 @@
-
 <!DOCTYPE html>
 <head>
-    <title>������ - ������</title>
+    <meta charset="UTF-8">
+    <title>Туризм - Поради</title>
     <link rel="stylesheet" href="style3.css">
 </head>
 <body id="main-body">
      <nav>
         <ul>
-            <li><a href="index.html">�������</a></li>
-            <li><a href="why-travel.html">����� ������������?</a></li>
-            <li><a href="travel-information.html">���������� ��� ���������</a></li>
-            <li><a href="tips.html">������</a></li>
-			<li><a href="popular.html">��������� �������</a></li>
+            <li><a href="index.html">Головна</a></li>
+            <li><a href="why-travel.html">Навіщо подорожувати?</a></li>
+            <li><a href="travel-information.html">Інформація для подорожей</a></li>
+            <li><a href="tips.html">Поради</a></li>
+			<li><a href="popular.html">Популярні подорожі</a></li>
         </ul>
     </nav>
      <header>
-        <h1 id="page-header" style="color:darkblue; font-size:20px; text-align:left">������: ������ ��� ������������</h1>
+        <h1 id="page-header" style="color:darkblue; font-size:20px; text-align:left">Туризм: Поради для подорожуючих</h1>
     </header>
     <main class="content">
         <section class="tips-section" id="travel-tips">
-            <h2 class="section-title">�������� ������ ��� ���������</h2>
-            <p class="tip-description">������� ������ ���� ���� �����������, ��� ���������� ���������. ��� ����� �����:</p>
+            <h2 class="section-title">Найкращі поради для подорожей</h2>
+            <p class="tip-description">Подорожі можуть бути дуже захопливими, але потребують підготовки. Ось кілька порад:</p>
             <ul class="tips-list">
-                <li class="tip-item">�������� ���� �������� ����������.</li>
-                <li class="tip-item">������ ���������� ������ ����� ������.</li>
-                <li class="tip-item">�� ��������� ��� ������ ���������.</li>
+                <li class="tip-item">Плануйте ваші маршрути заздалегідь.</li>
+                <li class="tip-item">Завжди перевіряйте погоду перед виїздом.</li>
+                <li class="tip-item">Не забувайте про важливі документи.</li>
             </ul>
         </section>
         <section class="resources-section">
-            <h2 class="section-title">������� �������</h2>
-            <p class="resource-description">��� ������� ����� ��� ���������� ����� ���������:</p>
+            <h2 class="section-title">Корисні ресурси</h2>
+            <p class="resource-description">Ось декілька сайтів для планування ваших подорожей:</p>
             <ul class="resources-list">
                 <li><a class="resource-link" href="https://www.tripadvisor.com" target="_blank">TripAdvisor</a></li>
 				
 				 <a target="_blank">
-                 <img src="image9.png" width="400" height="300" alt="Travel Image">
+                 <img src="image9.png" width="500" height="400" alt="Travel Image">
                  </a>
 				 
                 <li><a class="resource-link" href="https://www.airbnb.com" target="_blank">Airbnb</a></li>
@@ -46,5 +46,99 @@
             </ul>
         </section>
     </main>
+
+ <!-- також вористання document.write -->
+  <script>
+    document.write('<div style="background: linear-gradient(to right, #6da1fc, #bcb9fa); color: white; padding: 20px; text-align: center; font-size: 24px; font-weight: bold; border-radius: 10px; margin-bottom: 20px; box-shadow: 0 4px 6px rgba(0,0,0,0.1);">🛬 Готуйся до подорожі — перевір усе перед відправленням! 🛫</div>');
+  </script>
+	
+ <!-- innerHTML, outerHTML, nodeValue / data, textContent -->
+	
+	<h2 id="title" >🌍 Поради для мандрівників</h2>
+
+  <div id="tip">
+    <b>Порада 1:</b> Завжди майте копії документів.
+  </div>
+
+  <p id="text">Старий текст</p>
+  
+  <div id="example">
+  💼 Порада: Завжди перевіряйте документи.
+  </div>
+
+
+  <script>
+    const tip = document.getElementById("tip");
+    const title = document.getElementById("title");
+    const text = document.getElementById("text");
+
+    // innerHTML – змінюємо HTML-вміст
+    tip.innerHTML = "<b>🔆☔ Порада 1:</b> Перевіряйте погоду перед подорожжю.";
+
+    // outerHTML – замінюємо сам елемент
+    text.outerHTML = "<p id='text'>🔄 Також</p>";
+
+    // textContent – виводимо лише текст без тегів
+    const el = document.getElementById("example");
+    console.log(el.textContent);
+
+    // Створення нового текстового вузла
+    const newTextNode = document.createTextNode("🧳 Порада 2: Пакуйте лише необхідне.");
+    document.body.appendChild(newTextNode);
+
+    // nodeValue / data – змінюємо значення текстового вузла
+    newTextNode.nodeValue = "✈️ Порада 2: Завжди майте медичну страховку.";
+    // або
+    // newTextNode.data = "✈️ Порада 2: Завжди майте медичну страховку.";
+  </script>
+  
+  
+  
+  
+   <h2>🗽 Туристичні поради</h2>
+
+  <div id="advices">
+    <div class="advice">✅ Візьміть з собою аптечку.</div>
+  </div>
+
+  <script>
+    // 1. Використання document.write
+    document.write("<p style='color: green;'>✔️ Завантажено туристичні поради</p>");
+
+    // 2. Створення нового елемента через createElement і createTextNode
+    const newAdvice = document.createElement("div");
+    newAdvice.className = "advice";
+    const adviceText = document.createTextNode("🧳 Не забудьте копії документів.");
+    newAdvice.appendChild(adviceText);
+
+    // 3. Вставка за допомогою append, додає в кінець контейнера (🧳 Не забудьте копії документів), але ми видаляємо останню пораду, тому її не буде
+    const container = document.getElementById("advices");
+    container.append(newAdvice);
+
+    // 4. Створення та вставка поради через prepend, додає на початок контейнера
+    const firstAdvice = document.createElement("div");
+    firstAdvice.className = "advice";
+    firstAdvice.textContent = "✈️ Перевірте документи перед виїздом.";
+    container.prepend(firstAdvice);
+
+    // 5. Додавання поради після контейнера за допомогою after
+    const note = document.createElement("p");
+    note.textContent = "ℹ️ Поради створено динамічно.";
+    container.after(note);
+
+    // 6. Заміна поради на нову (replaceWith), заміняємо пораду (✅ Візьміть з собою аптечку) на (🚫 Не забувайте про правила ввезення речей)
+    const oldAdvice = container.querySelector(".advice:nth-child(2)"); // 2-га порада
+    const replacedAdvice = document.createElement("div");
+    replacedAdvice.className = "advice";
+    replacedAdvice.textContent = "🚫 Не забувайте про правила ввезення речей.";
+    oldAdvice.replaceWith(replacedAdvice);
+
+    // 7. Видалення останньої поради
+    const lastAdvice = container.lastElementChild;
+    lastAdvice.remove();
+  </script>
+  
+  
+  
 </body>
 </html>

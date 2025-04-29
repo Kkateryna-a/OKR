@@ -1,24 +1,48 @@
 <!DOCTYPE html>
 <head>
+    <meta charset="UTF-8">
     <meta name="author" content="Kate">
-    <title>������� ������� - ������</title>
+    <title>Головна сторінка - Туризм</title>
     <link rel="stylesheet" href="styles.css">
 </head>
 <body>
-    <h1>������� ������� �� ����������� ����</h1>
+
+
+
+ <!-- Внутрішній скрипт alert, prompt, confirm -->
+    <script>
+        alert('Ласкаво просимо на туристичний сайт!');
+        let userName = prompt('Як вас звати?');
+        let readyToTravel = confirm('Хочете дізнатись більше про подорожі?');
+        if (readyToTravel) {
+            alert('Відмінно, ' + userName + '! Гарної подорожі по нашому сайту!');
+        } else {
+            alert('Добре, можливо іншим разом.');
+        }
+    </script>
+
+
+
+    <script src="scripts.js"></script>
+	
+	
+	
+    <h1>Ласкаво просимо на туристичний сайт</h1>
     <nav>
         <ul>
-            <li><a href="index.html">�������</a></li>
-            <li><a href="why-travel.html">����� ������������?</a></li>
-            <li><a href="travel-information.html">���������� ��� ���������</a></li>
-            <li><a href="tips.html">������</a></li>
-			<li><a href="popular.html">��������� �������</a></li>
+            <li><a href="index.html">Головна</a></li>
+            <li><a href="why-travel.html">Навіщо подорожувати?</a></li>
+            <li><a href="travel-information.html">Інформація для подорожей</a></li>
+            <li><a href="tips.html">Поради</a></li>
+            <li><a href="popular.html">Популярні подорожі</a></li>
         </ul>
     </nav>
     <div class="content">
-        <p>���� ��� �������� ���������! ��� �� �������� ������� ���������� ��� �������, 
-        �������� ���������� ��������, ������ ��� ���������� �� ��������� ��� ���� �������� �������!</p>
+        <p>Сайт для любителів подорожей! Тут ви знайдете корисну інформацію про подорожі,
+        найкращі туристичні напрямки, поради для мандрівників та натхнення для вашої наступної пригоди!</p>
     </div>
+
+
     <a href="image2.jpg" target="_blank">
         <img src="image2.jpg" width="200" height="150" alt="Travel Image">
     </a>
@@ -31,5 +55,48 @@
     <a href="image5.jpg" target="_blank">
         <img src="image5.jpg" width="200" height="150" alt="Travel Image">
     </a>
+
+
+
+
+
+ <!-- Блок для динамічного виведення інформації -->
+    <div id="dynamicContent"></div>
+
+    <!-- Кнопки для виклику функцій з зовнішнього скрипта -->
+    <div class="buttons">
+        <button onclick="userDialog()">Діалог з користувачем</button>
+        <button onclick="showDeveloperInfo('Хоменко', 'Катерина')">Про розробника</button>
+        <button onclick="compareStrings()">Порівняти рядки</button>
+        <button onclick="changeBackground()">Змінити фон на 30 секунд</button>
+        <button onclick="redirectPage()">Перенаправити на інший сайт для бронювання</button>
+
+    </div>
+
+
+ <!-- Метод querySelectorAll -->
+
+<h2>Оберіть напрямок для подорожі:</h2>
+
+<button class="destination">Париж</button>
+<button class="destination">Рим</button>
+<button class="destination">Барселона</button>
+<button class="destination">Київ</button>
+
+<script>
+  const destinations = document.querySelectorAll('.destination');
+
+  destinations.forEach(btn => {
+    btn.addEventListener('click', () => {
+      btn.textContent = 'Обрано: ' + btn.textContent;
+      btn.style.backgroundColor = '#4CAF50';
+      btn.style.color = 'white';
+      btn.style.border = 'none';
+    });
+  });
+</script>
+
+
+
 </body>
 </html>
