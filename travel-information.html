@@ -16,7 +16,7 @@
             <li><a href="why-travel.html">Навіщо подорожувати?</a></li>
             <li><a href="travel-information.html">Інформація для подорожей</a></li>
             <li><a href="tips.html">Поради</a></li>
-			<li><a href="popular.html">Популярні подорожі</a></li>
+			<li><a href="popular.html">Популярно</a></li>
         </ul>
     </nav>
     
@@ -98,10 +98,160 @@
             <td>$50 на день</td>
         </tr>
     </table>
-    
+	
+	
     <!-- Карта -->
     <h3>Інтерактивна карта</h3>
     <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d325516.56926392514!2d30.203055195063037!3d50.40200751266227!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x40d4cf4ee15a4505%3A0x764931d2170146fe!2sKyiv%2C%20Ukraine%2C%2002000!5e0!3m2!1sen!2spl!4v1741045029708!5m2!1sen!2spl" width="600" height="450" style="border:0;" allowfullscreen="" loading="lazy"></iframe>
     
+	
+	
+	
+	
+	
+	
+	
+	
+		  <h1>Цікаві місця для подорожей</h1>
+
+  <!-- Призначення обробника через атрибут -->
+  <div class="card" onclick="showInfo()">
+    Карпати
+  </div>
+
+  <!-- Призначення обробника через властивість -->
+  <div class="card" id="sea">
+    Чорне море
+  </div>
+
+  <!-- Призначення обробника через addEventListener -->
+  <div class="card" id="kyiv">
+    Київ
+  </div>
+
+  <!-- Елемент для обробника-об’єкта -->
+  <div class="card" id="lviv">
+    Львів
+  </div>
+
+  <button id="remove">Видалити обробник зі Львова</button>
+
+  <script>
+    // Функція-обробник через атрибут
+    function showInfo() {
+      alert("Карпати — мальовничі гори в Україні!");
+    }
+
+    // Призначення через властивість
+    const seaCard = document.getElementById("sea");
+    seaCard.onclick = function () {
+      alert("Чорне море — популярне місце літнього відпочинку!");
+    };
+
+    // Призначення через addEventListener: кілька обробників
+    const kyivCard = document.getElementById("kyiv");
+
+    function handler1() {
+      alert("Київ — столиця України.");
+    }
+
+    function handler2() {
+      kyivCard.classList.toggle("highlight");
+    }
+
+    kyivCard.addEventListener("click", handler1);
+    kyivCard.addEventListener("click", handler2);
+
+    // Обробник-об’єкт з handleEvent та event.currentTarget
+    const lvivCard = document.getElementById("lviv");
+
+    const lvivHandler = {
+      handleEvent(event) {
+        alert("Львів — місто кави та архітектури!");
+        console.log("Спрацював обробник на:", event.currentTarget);
+        event.currentTarget.classList.toggle("highlight");
+      }
+    };
+
+    lvivCard.addEventListener("click", lvivHandler);
+
+    // Видалення обробника
+    const removeBtn = document.getElementById("remove");
+    removeBtn.addEventListener("click", function () {
+      lvivCard.removeEventListener("click", lvivHandler);
+      alert("Обробник для Львова видалено.");
+    });
+  </script>
+  
+  
+  
+  
+  
+   <h1>Міста для подорожей Україною</h1>
+
+  <!-- Список -->
+  <h2>Список міст</h2>
+  <ul id="cityList">
+    <li>Одеса</li>
+    <li>Луцьк</li>
+    <li>Полтава</li>
+    <li>Ужгород</li>
+  </ul>
+
+  <!-- Меню -->
+  <h2>Меню дій</h2>
+  <div class="menu" id="actionMenu">
+    <button data-action="alert">Повідомлення</button>
+    <button data-action="highlight">Підсвітити фон</button>
+    <button data-action="reset">Очистити все</button>
+  </div>
+
+  <!-- Елементи з поведінкою (behavior)-->
+  <h2>Дякую, що завітали на наш сайт</h2>
+  <div class="behavior" data-behavior="toggleHighlight">Натисніть, якщо ви все прочитали</div>
+  <div class="behavior" data-behavior="showMessage">Натисніть, щоб побачити повідомлення</div>
+
+  <script>
+  
+    // Список: підсвічування одного активного елементу
+    const cityList = document.getElementById("cityList");
+
+    cityList.onclick = function(event) {
+      if (event.target.tagName === "LI") {
+        [...cityList.children].forEach(li => li.classList.remove("active"));
+        event.target.classList.add("active");
+      }
+    };
+
+    // Меню: робота з data-action
+    const actionMenu = document.getElementById("actionMenu");
+
+    actionMenu.onclick = function(event) {
+      if (event.target.tagName === "BUTTON") {
+        const action = event.target.dataset.action;
+
+        if (action === "alert") {
+          alert("Подорожуй з радістю!");
+        } else if (action === "highlight") {
+          document.body.style.backgroundColor = "#bcaef5";
+        } else if (action === "reset") {
+          document.body.style.backgroundColor = "";
+          alert("Скидання виконано.");
+        }
+      }
+    };
+
+    // Поведінка (behavior)
+    document.addEventListener("click", function(event) {
+      const behavior = event.target.dataset.behavior;
+
+      if (behavior === "toggleHighlight") {
+        event.target.classList.toggle("highlight");
+      } else if (behavior === "showMessage") {
+        alert("Гарної подорожі! (Це приклад поведінки через data-behavior!)");
+      }
+    });
+  </script>
+  
 </body>
 </html>

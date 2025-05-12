@@ -47,7 +47,7 @@
         </section>
     </main>
 
- <!-- також вористання document.write -->
+ <!-- також використання document.write -->
   <script>
     document.write('<div style="background: linear-gradient(to right, #6da1fc, #bcb9fa); color: white; padding: 20px; text-align: center; font-size: 24px; font-weight: bold; border-radius: 10px; margin-bottom: 20px; box-shadow: 0 4px 6px rgba(0,0,0,0.1);">🛬 Готуйся до подорожі — перевір усе перед відправленням! 🛫</div>');
   </script>
@@ -103,7 +103,14 @@
 
   <script>
     // 1. Використання document.write
-    document.write("<p style='color: green;'>✔️ Завантажено туристичні поради</p>");
+    document.write("<p id='status' style='color: green;'>✔️ Завантажено туристичні поради</p>");
+
+    // Таймер на зникнення через 5 секунд
+    setTimeout(() => {
+    const msg = document.getElementById("status");
+    if (msg) msg.remove();
+    }, 5000);
+
 
     // 2. Створення нового елемента через createElement і createTextNode
     const newAdvice = document.createElement("div");
