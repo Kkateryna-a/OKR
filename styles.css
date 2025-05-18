@@ -172,5 +172,76 @@ ul + p {
 
 
 
+  .destination {
+      display: inline-block;
+      padding: 20px;
+      margin: 15px;
+      background-color: white;
+      border: 2px solid #ccc;
+      border-radius: 10px;
+      cursor: pointer;
+      transition: all 0.3s;
+    }
+
+    .destination.hovered {
+      background-color: #d1f0ff;
+      border-color: #3498db;
+      transform: scale(1.05);
+    }
+
+
+
+
+    #drag-container {
+      display: flex;
+      margin-top: 40px;
+      justify-content: space-around;
+    }
+
+    .drop-zone {
+      width: 600px;
+      height: 350px;
+      border: 2px dashed #aaa;
+      border-radius: 10px;
+      padding: 10px;
+      background-color: white;
+    }
+
+    .draggable {
+      width: 500px;
+      cursor: grab;
+	  
+    }
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 
 

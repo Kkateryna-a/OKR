@@ -100,6 +100,116 @@
     </table>
 	
 	
+	
+	
+	
+	
+	
+	
+	
+	<h2>Туристичні напрямки</h2>
+
+  <div class="destination">Париж</div>
+  <div class="destination">Київ</div>
+  <div class="destination">Токіо</div>
+  <div class="destination">Італія</div>
+  <div class="destination">Канада</div>
+  <div class="destination">Франція</div>
+  <div class="destination">Греція</div>
+  <div class="destination">Норвегія</div>
+
+
+
+<script>
+    // --- mouseover / mouseout ---
+    document.querySelectorAll('.destination').forEach(el => {
+      el.addEventListener('mouseover', (event) => {
+        if (!event.relatedTarget || !event.currentTarget.contains(event.relatedTarget)) {
+          event.target.classList.add('hovered');
+        }
+      });
+
+      el.addEventListener('mouseout', (event) => {
+        if (!event.relatedTarget || !event.currentTarget.contains(event.relatedTarget)) {
+          event.target.classList.remove('hovered');
+        }
+      });
+    });
+	
+	
+  </script>
+  
+  
+  
+  
+  
+  
+  
+  
+  
+   <div id="drag-container">
+    <div class="drop-zone" id="zone1">
+      <p>Перетягніть зображення сюди</p>
+    </div>
+	
+    <div class="drop-zone" id="zone2">
+      <img src="image11.jpg" class="draggable" id="dragImg" alt="Paris">
+    </div>
+  </div>
+  
+  
+  
+  <script>
+    // --- Перетягування ---
+    const dragImg = document.getElementById('dragImg');
+    let isDragging = false;
+    let offsetX, offsetY;
+
+    dragImg.addEventListener('mousedown', (e) => {
+      isDragging = true;
+      offsetX = e.offsetX;
+      offsetY = e.offsetY;
+      dragImg.style.position = 'absolute';
+      dragImg.style.zIndex = 1000;
+    });
+
+    document.addEventListener('mousemove', (e) => {
+      if (isDragging) {
+        dragImg.style.left = (e.pageX - offsetX) + 'px';
+        dragImg.style.top = (e.pageY - offsetY) + 'px';
+      }
+    });
+
+    document.addEventListener('mouseup', (e) => {
+      if (isDragging) {
+        isDragging = false;
+
+        // Визначаємо зону, куди відпущено
+        const zone1 = document.getElementById('zone1');
+        const rect = zone1.getBoundingClientRect();
+
+        if (
+          e.clientX > rect.left && e.clientX < rect.right &&
+          e.clientY > rect.top && e.clientY < rect.bottom
+        ) {
+          zone1.appendChild(dragImg);
+          dragImg.style.position = 'static';
+		  
+        } else {
+          // Повертаємо назад
+          document.getElementById('zone2').appendChild(dragImg);
+          dragImg.style.position = 'static';
+        }
+      }
+    });
+  </script>
+	
+	
+	
+	
+	
+	
+	
     <!-- Карта -->
     <h3>Інтерактивна карта</h3>
     <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d325516.56926392514!2d30.203055195063037!3d50.40200751266227!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x40d4cf4ee15a4505%3A0x764931d2170146fe!2sKyiv%2C%20Ukraine%2C%2002000!5e0!3m2!1sen!2spl!4v1741045029708!5m2!1sen!2spl" width="600" height="450" style="border:0;" allowfullscreen="" loading="lazy"></iframe>
@@ -119,17 +229,17 @@
     Карпати
   </div>
 
-  <!-- Призначення обробника через властивість -->
+	
   <div class="card" id="sea">
     Чорне море
   </div>
 
-  <!-- Призначення обробника через addEventListener -->
+
   <div class="card" id="kyiv">
     Київ
   </div>
 
-  <!-- Елемент для обробника-об’єкта -->
+
   <div class="card" id="lviv">
     Львів
   </div>
@@ -137,6 +247,7 @@
   <button id="remove">Видалити обробник зі Львова</button>
 
   <script>
+  
     // Функція-обробник через атрибут
     function showInfo() {
       alert("Карпати — мальовничі гори в Україні!");
